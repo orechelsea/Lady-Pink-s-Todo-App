@@ -9,7 +9,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv ('django-insecure-g4_qvs)o)%756&w+^7r$3yc(l!p$qsm6b8@l+r2h1xp@xtmm4$')
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -71,7 +71,7 @@ WSGI_APPLICATION = 'ladypink.wsgi.application'
 #}
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 # Password validation
