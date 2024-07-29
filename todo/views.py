@@ -7,6 +7,7 @@ from .forms import MyForm
 def index(request):
     context = {
         'greeting': 'Hello! and welcome to Lady Pink\'s Todo List App to keep you from pulling your hair out and get you organised!!! What are you waiting for? Sign Up Below to join thousands of Pinkies in the organisation frenzy!!.',
+         'message': 'Show us some love on our social media platforms, get some new inspiration on how to schedule your time effectively and get all the cool features our app has to offer.',
     }
 
     if request.method == 'POST':
@@ -17,7 +18,7 @@ def index(request):
     else:
         form = MyForm()
 
-   
+  
     context['form'] = form
 
     return render(request, 'index.html', context)
