@@ -1,9 +1,9 @@
 from django import forms
-from .models import todo
+from .models import Todo
 
 class MyForm(forms.ModelForm):
     class Meta:
-        model = todo  
+        model = Todo  
         fields = ['name', 'email', 'password'] 
         widgets = {  
             'name': forms.TextInput(attrs={
