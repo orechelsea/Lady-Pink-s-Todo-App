@@ -24,12 +24,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-g4_qvs)o)%756&w+^7r$3yc(l!p$qsm6b8@l+r2h1xp@xtmm4$'
+SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-g4_qvs)o)%756&w+^7r$3yc(l!p$qsm6b8@l+r2h1xp@xtmm4$')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://8000-orechelsea-ladypinkstod-n5m70bx4tdh.ws.codeinstitute-ide.net', ".herokuapp.com"]
+ALLOWED_HOSTS = [
+    'https://8000-orechelsea-ladypinkstod-n5m70bx4tdh.ws.codeinstitute-ide.net', 
+    ".herokuapp.com"
+    ]
 
 CSRF_TRUSTED_ORIGINS = [
     'https://*.codeinstitute-ide.net/',
@@ -62,7 +65,7 @@ ROOT_URLCONF = 'ladypink.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'templates'],
+        'DIRS': [BASE_DIR/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -126,7 +129,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
