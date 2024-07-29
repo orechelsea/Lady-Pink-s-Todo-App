@@ -1,6 +1,4 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-
 from .forms import MyForm
 
 # Create your views here.
@@ -21,4 +19,4 @@ def index(request):
   
     context['form'] = form
 
-    return render(request, 'index.html', context)
+    return render(request, 'base.html', context)
