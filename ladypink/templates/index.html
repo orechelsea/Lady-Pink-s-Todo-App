@@ -13,6 +13,9 @@
             <a class="nav-link1" href="{% url 'update_todo' %}">Add/Update Todo List</a>
         </nav>
     </header>
+    <div>
+        <p>{{ greeting }}</p>
+    </div>
     <main>
         <form method="post">
             {% csrf_token %}
