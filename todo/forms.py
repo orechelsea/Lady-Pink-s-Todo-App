@@ -1,6 +1,7 @@
 from django import forms
 from .models import Todo
 
+
 class MyForm(forms.ModelForm):
     class Meta:
         model = Todo  
@@ -36,7 +37,7 @@ class TodoForm(forms.ModelForm):
                 'class': 'form-control',
                 'placeholder': 'enter description of todo item'  
             }),
-            'priority': forms.select(attrs={
+            'priority': forms.Select(attrs={
                 'class': 'form-control', 
             }),
             'complete': forms.CheckboxInput(attrs={

@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import index, login_view, update_todo_view
 from django.contrib.auth.views import LogoutView
+from . import views
 
 
 urlpatterns = [
