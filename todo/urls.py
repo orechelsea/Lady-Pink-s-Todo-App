@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import update_todo
 
 
 urlpatterns = [
     path('', views.index, name='home'),
-    path('update/', views.update_todo, name='update_todo'),
+    path('update/', update_todo.as_view(), name='update_todo'),
 ]

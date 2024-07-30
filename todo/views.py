@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import MyForm
+from django.views.generic.list import ListView
 
 # Create your views here.
 def index(request):
@@ -20,3 +21,7 @@ def index(request):
     context['form'] = form
 
     return render(request, 'base.html', context)
+
+
+class update_todo(ListView): 
+    model = Todo
