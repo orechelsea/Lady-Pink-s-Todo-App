@@ -25,3 +25,4 @@ def index(request):
 
 class update_todo(ListView): 
     model = Todo
+    Fields = []
