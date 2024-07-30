@@ -23,6 +23,3 @@ def index(request):
     return render(request, 'base.html', context)
 
 
-class update_todo(ListView): 
-    model = Todo
-    Fields = []
