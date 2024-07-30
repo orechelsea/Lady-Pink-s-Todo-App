@@ -5,7 +5,7 @@ from .models import Todo
 class MyForm(forms.ModelForm):
     class Meta:
         model = Todo  
-        fields = ['name', 'email', 'password'] 
+        fields = ['name', 'email',] 
         widgets = {  
             'name': forms.TextInput(attrs={
                 'class': 'form-control',
