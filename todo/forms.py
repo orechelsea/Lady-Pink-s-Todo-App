@@ -17,11 +17,6 @@ class MyForm(forms.ModelForm):
                 'placeholder': 'name@example.com',
                 'id': 'exampleFormControlInput2'
             }),
-            'password': forms.PasswordInput(attrs={
-                'class': 'form-control',
-                'id': 'inputPassword6',
-                'aria-describedby': 'passwordHelpInline'
-            }),
         }
 
 class TodoForm(forms.ModelForm):
