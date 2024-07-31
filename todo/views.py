@@ -22,7 +22,7 @@ def index(request):
 
     context['form'] = form
 
-    return render(request, 'base.html', context)
+    return render(request, 'todo/index.html', context)
 
 def login_view(request):
     if request.method == 'POST':
@@ -54,7 +54,7 @@ def update_todo_view(request):
         todo_form = TodoForm()
     
     todos = Todo.objects.filter(user=request.user)
-    return render(request, 'update_todo.html', {
+    return render(request, 'todo/update_todo.html', {
         'todo_form': todo_form,
         'todos': todos
     })
